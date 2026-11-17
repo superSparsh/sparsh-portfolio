@@ -61,4 +61,5 @@ Or deploy locally:
 npm run deploy
 ```
 
-SPA fallback is also provided via `public/_redirects` for Pages-style hosting.
+SPA routing is handled by `not_found_handling = "single-page-application"` in `wrangler.toml`.
+Do not add a `public/_redirects` SPA catch-all — it conflicts with Workers assets deploy.
