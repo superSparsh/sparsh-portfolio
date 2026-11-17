@@ -46,10 +46,19 @@ npm run preview
 
 Output is written to `dist/`.
 
-## Cloudflare Pages
+## Cloudflare deploy
 
+[`wrangler.toml`](wrangler.toml) serves the Vite `dist/` folder as static assets (SPA mode).
+
+**Cloudflare dashboard settings:**
 - Build command: `npm run build`
-- Output directory: `dist`
-- Config file: [`wrangler.toml`](wrangler.toml)
+- Deploy command: `npx wrangler deploy`
+- Root directory: project root
 
-SPA fallback is provided via `public/_redirects`.
+Or deploy locally:
+
+```bash
+npm run deploy
+```
+
+SPA fallback is also provided via `public/_redirects` for Pages-style hosting.
